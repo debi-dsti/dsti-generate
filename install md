@@ -1,0 +1,63 @@
+#!bash
+
+# Install homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew update
+
+
+# Env
+. ~/.profile
+
+# Install all packages
+brew bundle
+
+# Java
+echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.profile
+echo 'eval "$(jenv init -)"' >> ~/.profile
+jenv add /Library/Java/JavaVirtualMachines/openjdk-13.0.1.jdk/Contents/Home
+jenv add /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/
+
+# Atom
+echo '' | apm install Stylus
+echo '' | apm install Sublime-Style-Column-Selection
+echo '' | apm install atom-monokai-dark
+echo '' | apm install atom-typescript
+echo '' | apm install busy-signal
+echo '' | apm install chester-atom-syntax
+echo '' | apm install color-picker
+echo '' | apm install compare-files
+echo '' | apm install git-control
+echo '' | apm install git-log
+echo '' | apm install git-plus
+echo '' | apm install git-status
+echo '' | apm install git-time-machine
+echo '' | apm install highlight-selected
+echo '' | apm install indent-guide-improved
+echo '' | apm install intentions
+echo '' | apm install language-coffee-script
+echo '' | apm install language-docker
+echo '' | apm install language-elixir
+echo '' | apm install language-jade
+echo '' | apm install language-log
+echo '' | apm install language-protobuf
+echo '' | apm install language-scala
+echo '' | apm install language-vue
+echo '' | apm install linter
+echo '' | apm install linter-coffeelint
+echo '' | apm install linter-ui-default
+echo '' | apm install markdown-toc
+echo '' | apm install material-syntax
+echo '' | apm install minimap
+echo '' | apm install minimap-find-and-replace
+echo '' | apm install minimap-highlight-selected
+echo '' | apm install minimap-selection
+echo '' | apm install monokai
+echo '' | apm install pretty-json
+echo '' | apm install project-manager
+echo '' | apm install react
+echo '' | apm install split-diff
+echo '' | apm install tail
+echo '' | apm install teletype
+echo '' | apm install tree-view-git-status
+echo '' | apm install vue-format
+echo '' | apm install vue2-autocomplete
